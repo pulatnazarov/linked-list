@@ -62,10 +62,10 @@ func (l *LinkedList) ShowLinkedList() {
 		fmt.Println("LinkedList is empty.")
 		return
 	}
-	fmt.Printf("%+v\n", *currentNode)
-	for currentNode.Next != nil {
-		currentNode = currentNode.Next
+
+	for currentNode != nil {
 		fmt.Printf("%+v\n", *currentNode)
+		currentNode = currentNode.Next
 	}
 }
 
@@ -74,14 +74,13 @@ func main() {
 	linkedList.Add(1)
 	linkedList.Add(2)
 	linkedList.Add(3)
-	linkedList.Add("Value")
+	linkedList.Add(4)
 
 	linkedList.Remove(1)
 	linkedList.Remove(3)
 
 	linkedList.Add("any")
 	linkedList.Add("value2222")
-	linkedList.Add("value3333")
 
 	linkedList.Add(5.555)
 
